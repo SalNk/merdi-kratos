@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+
+/* Barre de navigation */
+
+.logo{
+    font-size: 20px;
+}
+.logo span{
+    font-weight: 500;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.247);
+}
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+} 
+.nav-links a{
+    margin-left: 20px;
+} 
+.nav-links a:hover{
+    transform: scale(1.2);
+}
+
+.haut .nav{
+    top: 0;
+    position: fixed;
+    width: 85%;
+    align-items: center;
+}
+/* Fin Barre de navigation */
+
+
+/* Hero contenu */
+.haut{
+    height: 100vh;
+    /* background-image: url('./img/bg.JPG'); */
+    background: linear-gradient(rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.911)), url('./img/bg.JPG') center center fixed no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 19px;
+    padding: 20px 100px;
+}
+.hero{
+    height: 100%;
+}
+.hero-content{
+    margin-top: 5%;
+    display: flex;
+    text-align: center;
+}
+
+.hero .hero-left{   
+    width: 50%;
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    text-align: left;
+    /* background-color: green; */
+    position: relative;
+    left: 100px;
+}
+.hero .hero-left h1{
+    font-size: 3em;
+}
+.hero .hero-right{
+    width: 50%;
+    /* background-color: red; */
+}
+.hero .hero-right .image{
+    width: 60%;
+    animation: slideDown 1s;
+}
+@keyframes slideDown {
+    from{
+        transform: translateX(300px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+.hero-left a{
+    margin-top: 20px;
+    border: 2px solid rgb(0, 112, 241);
+    padding: 5px 10px;
+    border-radius: 30px;
+    text-align: center;
+    width: 35%;
+    transition: background-color 1.8s;
+}
+.hero-left a:hover {
+    background-color: rgb(0, 112, 241);
+}
+
+/* Hero contenu */
+
+/* section-me */
+.section-me{
+    text-align: center;
+}
+.section-me h1, .section-me p{
+    color: rgb(12, 12, 12);
+    margin-top: 10px;
+}
+.section-me h1{
+    margin-top: 30px;
+}
+.section-me img{
+    margin-top: -10px;
+}
+/* section-me */
+
+/* section-parcours */
+.section-parcours{
+    padding: 50px 100px;
+    background-color: rgb(0, 26, 56);
+}
+.section-parcours h1, h2{
+    text-align: center;
+}
+.cards{
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.card-left, .card-right{
+    width: 45%;
+}
+.card-left{
+    margin: 30px 0;
+    /* background-color: red;  */
+    height: 300px;
+}
+.section-parcours .card-left img{
+    width: 100%;
+}
+
+
+/* section-knowledge */ 
+.section-knowledge{
+    padding: 50px 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.section-knowledge p{
+    color: black;
+}
+.card-title{
+    display: flex;
+    justify-content: space-between;
+}
+.section-knowledge h1, .card-element p{
+    color: rgb(12, 12, 12);
+}
+.card-element{
+    margin-top: 20px;
+    width: 20%;
+}
+.card-element img{
+    width: 25%;
+    margin: 20px 0;
+}
+
+/* section-footer */
+.section-footer{
+    background-color: rgb(0, 26, 56);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 50px;
+}
+.social-media a img{
+    font-size: 30px;
+    margin-right: 20px;
+    padding: 10px;
+    width: 5% ;
+}
+.section-footer p{
+    padding : 20px;
+}
+.social-media a img:hover{
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 560px){
+    .hero-content .hero-left h1{
+        font-size: 10px;
+    }
+    .haut{
+        padding: 20 10px;
+    }
+    .hero{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 980px){
+    .nav-links a{
+        display: none;
+    }
+    .hero-content .hero-right{
+        display: none;
+    }
+    .hero-content .hero-left{
+        left: 0;
+        width: 100%;
+        margin-top: 70px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-content .hero-left h1{
+        font-size: 1.9em;
+    }
+    nav{
+        /* padding: 0; */
+    }
+    .logo{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1400px){
+    .hero{
+        height: 70%;
+    } 
+}
