@@ -47,7 +47,8 @@
 /* Hero contenu */
 .haut{
     height: 100vh;
-    /* background-image: url('./img/bg.JPG'); */
+    /* background-image: url('.
+    assets/img/bg.JPG'); */
     background: linear-gradient(rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.911)), url('./img/bg.JPG') center center fixed no-repeat;
     background-size: cover;
     text-align: center;
